@@ -2,8 +2,8 @@ import numpy as np
 from PIL import Image
 import os
 # Read grayscale images
-low_img = np.array(Image.open("low_light.png").convert("L"))
-brt_img = np.array(Image.open("bright_light.png").convert("L"))
+low_img = np.array(Image.open("low_light.jpg").convert("L"))
+brt_img = np.array(Image.open("bright_light.jpg").convert("L"))
 out_dir = "bitplane_results/"
 os.makedirs(out_dir, exist_ok=True)
 # Function: reconstruct using lowest 3 bit-planes
