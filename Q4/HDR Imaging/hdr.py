@@ -5,7 +5,7 @@ from PIL import Image
 def resize_all(imgs):
     h, w = imgs[0].shape[:2]
     return [np.array(Image.fromarray(im).resize((w, h))) if im.shape[:2] != (h, w) else im for im in imgs]
-# Debevec gsolve
+# Debevec gsolve Computing Camera Response Function
 def gsolve(Z, B, lam=100):
     n = 256
     P, N = Z.shape
